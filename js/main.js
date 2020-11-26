@@ -73,7 +73,7 @@
 
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, 'easeInOutQuad',function() {
+	    }, 800, 'easeInOutQuad',function() {
 	    	// window.location.hash = href;
 	    });
 		});
@@ -279,6 +279,7 @@
 			$('html,body').animate({
 				scrollTop: $('.goto-here').offset().top
 			}, 1000, 'easeInOutQuad');
+			
 			
 			return false;
 		});
