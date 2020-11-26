@@ -73,7 +73,7 @@
 
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
+	    }, 500, 'easeInOutQuad',function() {
 	    	// window.location.hash = href;
 	    });
 		});
@@ -175,31 +175,31 @@
 
 	
 
-	var counter = function() {
+	// var counter = function() {
 		
-		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
+	// 	$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
 
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+	// 		if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
+	// 			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+	// 			$('.number').each(function(){
+	// 				var $this = $(this),
+	// 					num = $this.data('number');
+	// 					console.log(num);
+	// 				$this.animateNumber(
+	// 				  {
+	// 				    number: num,
+	// 				    numberStep: comma_separator_number_step
+	// 				  }, 7000
+	// 				);
+	// 			});
 				
-			}
+	// 		}
 
-		} , { offset: '95%' } );
+	// 	} , { offset: '95%' } );
 
-	}
-	counter();
+	// }
+	// counter();
 
 
 	var contentWayPoint = function() {
@@ -278,7 +278,7 @@
 
 			$('html,body').animate({
 				scrollTop: $('.goto-here').offset().top
-			}, 800, 'easeInOutQuad');
+			}, 1000, 'easeInOutQuad');
 			
 			return false;
 		});
