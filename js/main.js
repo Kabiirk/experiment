@@ -73,10 +73,11 @@
 
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 800, 'easeInOutQuad',function() {
+	    }, 500, 'easeIn',function() {
 	    	// window.location.hash = href;
 	    });
 		});
+		console.log("onpageclick")
 
 	};
 
@@ -277,8 +278,10 @@
 			event.preventDefault();
 
 			$('html,body').animate({
-				scrollTop: $('.goto-here').offset().top
-			}, 1000, 'easeInOutQuad');
+				scrollTop: $('.goto-here').offset().top,
+				easing: 'easeInOut'
+			}, 1000);
+			console.log("GOhere")
 			
 			
 			return false;
@@ -374,7 +377,8 @@ window.onload = function() {
     //set the top offset animation and speed
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top - 180
-},500);
+},500, 'easeInOutQuad');
+console.log("Scrollspy")
     hash($(this).attr('href'));
   });
   
