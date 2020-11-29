@@ -8936,10 +8936,13 @@ h1, h2, h3, h4, h5,
 
 
 .project {
-  width: 100%;
-  height: 350px;
+  width: 80%;
+  height: 300px;
   margin-bottom: 0;
   margin-top: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 0 0 0;
   position: relative;
   border-radius: 2%;
   z-index: 0; }
@@ -9012,6 +9015,10 @@ h1, h2, h3, h4, h5,
     opacity: .9; }
   .project:hover .text, .project:focus .text {
     opacity: 1; }
+
+.proj{
+  overflow: hidden;
+}
 
 .aside-stretch {
   background: #718dff; }
